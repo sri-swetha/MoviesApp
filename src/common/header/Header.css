@@ -1,0 +1,20 @@
+.header{
+    text-align: right;
+    padding: 20px; 
+    background: #000;
+       
+}
+#loginBtn{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+.app-logo {
+    animation: app-logo-spin infinite 8s linear;
+    height: 35px;
+    background: #ff7f7f;
+    float:left;
+ }
+ 
+ @keyframes app-logo-spin {
+    from { transform: scaleX(-1); }
+ }
