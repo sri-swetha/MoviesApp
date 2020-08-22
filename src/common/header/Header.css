@@ -18,3 +18,22 @@
  @keyframes app-logo-spin {
     from { transform: scaleX(-1); }
  }
+ #modalId{
+    margin: 15% 15% 15% 25%;
+    width: 40%; 
+    height:40%;
+    overflow:hidden;
+ }
+ .tabs{
+     margin-bottom: 20px;
+     margin-left: 110px;
+ }
+ .dispNone{
+     display:none;
+ }
+ .dispBlock{
+     display:block;
+ }
+ .red{
+     color:red;
+ }
