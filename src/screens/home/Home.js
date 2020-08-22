@@ -21,7 +21,20 @@ const styles = theme => ({
         flexWrap: 'nowrap',
         transform: 'translateZ(0)',
         width: '100%'
-    }
+    },
+    rootMain: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        backgroundColor: theme.palette.background.paper,
+        float:'left',
+        padding: '25px'
+      },
+      gridList: {
+        width: 450,
+        height:600,
+      }
 });
 
 class Home extends Component {
@@ -34,14 +47,25 @@ class Home extends Component {
                     <span>Upcoming Movies</span>
                 </div>
                 <GridList cols={5} className={classes.gridListUpcomingMovies}>
-                    {moviesData.map(movie=>(
-                        <GridListTile key= {movie.id}>
-                            <img src={movie.poster_url} alt={movie.title} />                        
+                    {moviesData.map(movie => (
+                        <GridListTile key={movie.id}>
+                            <img src={movie.poster_url} alt={movie.title} />
                             <GridListTileBar title={movie.title} />
                         </GridListTile>
                     ))}
-                    
+
                 </GridList>
+                <div className={classes.rootMain}>
+                    <GridList cols={3} spacing={20} cellHeight={180} className={classes.gridList}>    
+                        {moviesData.map((movie) => (
+                            <GridListTile key={movie.id}>
+                                <img src={movie.poster_url} alt={movie.title} />
+                                <GridListTileBar title={movie.title} />
+                            </GridListTile>
+                        ))}
+                    </GridList>
+                </div>
+
             </div>
         )
     }
